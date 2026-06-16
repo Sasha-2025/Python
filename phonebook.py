@@ -125,3 +125,43 @@ def remove_existing(pb):
 
 def delete_all(pb):
     return pb.clear()
+
+
+
+
+
+
+def search_existing(pb):
+
+    choice = int(input("Enter search criteria\n\n\n 1. Name \n2. Number \n3.Email-id\n 4. DOB \n 5. Category(Family/Friends/Work/Others) \n Please enter:"))
+
+    temp = []
+    check = -1
+
+
+
+    if choice == 1:
+
+        query = str(input("Please enter the name of the contact you wish to search: "))
+
+        for i in range(len(pb)):
+
+            if query == pb[i][0]:
+                check = i 
+                temp.append(pb[i])
+
+
+
+    elif choice == 2:
+
+        query = int(input("Please enter the number of the contact you wish to search:"))
+
+        for i in range(len(pb)):
+            if query == pb[i][1]:
+                check = i 
+                temp.append(pb[i])
+
+
+
+
+    elif choice == 3:
